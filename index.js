@@ -7,7 +7,7 @@ function modify (router, method, beforeFn) {
   };
 }
 
-module.exports = function Router (options) {
+module.exports = function XRouter (options) {
   const router = express.Router(options);
   const strictMiddlewares = [(_, __, next) => next()];
   const before = (req, res, next) => {
