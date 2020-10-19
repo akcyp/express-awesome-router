@@ -22,6 +22,7 @@ const router = Router();
 router.before('/', (req, res, next) => {
   // Attach middleware to existing only routes
   res.status(418);
+  next();
 });
 router.get('/', (req, res) => res.send('Hello world'));
 
