@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 
 function modify (router, method, beforeFn) {
   const old = router[method];

@@ -1,7 +1,7 @@
-import { Router, IRouterHandler, IRouterMatcher } from 'express-serve-static-core';
-declare module 'express-awesome-router' {
-  interface XRouter extends Router {
-    before: IRouterHandler<Router> & IRouterMatcher<Router>;
-  }
-  export interface XRouter {}
+import { RouterOptions, IRouterHandler, IRouterMatcher, Router } from 'express';
+export interface XRouter extends Router {
+  (options?: RouterOptions): XRouter;
+  before: IRouterHandler<this> & IRouterMatcher<this>;
 }
+var XRouterFn: XRouter;
+export default XRouterFn;
