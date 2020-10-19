@@ -1,6 +1,6 @@
 {
   "name": "express-awesome-router",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Express router with more features",
   "main": "index.js",
   "typings": "index.d.ts",
