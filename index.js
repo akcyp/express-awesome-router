@@ -13,8 +13,8 @@ module.exports = function AwesomeRouter (options) {
   const before = (req, res, next) => {
     return express.Router().use(strictMiddlewares)(req, res, next);
   };
-  router.before = (...beforeFn) => {
-    strictMiddlewares.push(...beforeFn);
+  router.before = (path, ...beforeFn) => {
+    strictMiddlewares.push(express.Router().use(path, ...beforeFn));
   };
   ['all', 'get', 'post', 'put', 'delete', 'patch', 'options', 'head'].forEach(method => {
     modify(router, method, before);
