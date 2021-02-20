@@ -77,7 +77,7 @@ authRouter.get('/profile', authGuard, (req, res) => res.render('profile'));
 // -----------------------------↴
 authRouter.get('/settings', authGuard, (req, res) => res.render('settings'));
 /*
-  Too hard to keep the projekt structure
+  Too hard to keep the project structure
 */
 
 app.use(router);
